@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+
+body {
+    background-image: url("1img/2bg.png"); 
+    background-size: fit;
+    background-position:fit;
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 300px; 
+.font1 {
+    font-family: "Dawning of a New Day", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 80px; 
+    color: white;
+    text-align: center;
+  
+}
+.circle-container {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 400px;
+    height: 400px;
+    margin-top: -100px; 
+    margin-left: -300px; 
+}
+페이지들 사이트 
+.rotating-image {
+    position: absolute;
+    width: 600px; 
+    height: auto;
+    transition: transform 0.5s ease-out;
+}
+
+.rotating-image:nth-child(1) { transform: rotate(0deg) translate(180px) rotate(0deg); }
+.rotating-image:nth-child(2) { transform: rotate(120deg) translate(180px) rotate(-120deg); }
+.rotating-image:nth-child(3) { transform: rotate(240deg) translate(180px) rotate(-240deg); }
+
+조약돌 파트 
+.past-present-future {
+    position: fixed;
+    width: fit-content;
+    margin: 0 auto;
+    top: -100px; 
+    left: 37%;
+    opacity: 60%;
+}
+.bar-image {
+    position: absolute;
+    width: 400px; 
+    transition: 0.3s ease-in-out;
+}
+
+.bar-image:nth-child(1) {
+    left: -10px;
+    z-index: 1;
+    top:30px
+}
+
+.bar-image:nth-child(2) {
+    left: -15px;
+    z-index: 2;
+    top: -20px
+}
+
+.bar-image:nth-child(3) {
+    left: 25px;
+    z-index: 1;
+}
+
