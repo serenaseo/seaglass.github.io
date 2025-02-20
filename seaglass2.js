@@ -6,6 +6,43 @@ window.addEventListener("wheel", function(event) {
 }, { passive: false });
 
 
+function createRandomQuestionMark() {
+    const questionMark = document.createElement("div");
+    questionMark.classList.add("questionmark");
+
+    const img = document.createElement("img");
+    img.src = "1img/question.png"; 
+    questionMark.appendChild(img);
+
+    const randomX = Math.random() * window.innerWidth;  
+    const randomY = Math.random() * window.innerHeight; 
+    const randomSize = Math.random() * 100 + 50;  
+    const randomRotation = Math.random() * 360; 
+
+    questionMark.style.left = randomX + 'px';
+    questionMark.style.top = randomY + 'px';
+    questionMark.style.width = randomSize + 'px';
+    questionMark.style.height = randomSize + 'px';
+    questionMark.style.transform = `rotate(${randomRotation}deg)`;
+
+    const randomDelay = Math.random() * 2 + 1;  
+    questionMark.style.animation = `fade-in-out ${randomDelay}s ease-in-out`;
+
+    document.body.appendChild(questionMark);
+
+    setTimeout(() => {
+        questionMark.style.opacity = 2.0;
+    }, randomDelay * 1000 / 2);  
+
+    setTimeout(() => {
+        questionMark.remove();
+    }, randomDelay * 1000);  
+}
+
+setInterval(createRandomQuestionMark, 500);
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
